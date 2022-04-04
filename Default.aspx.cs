@@ -12,6 +12,7 @@ namespace WebApplicationLab8D
     {
         static List<Jugador> jugadores = new List<Jugador>();
         static List<Resultado> resultados = new List<Resultado>();
+        
 
         public void Leer()
         {
@@ -36,11 +37,16 @@ namespace WebApplicationLab8D
         }
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Postback: todas las veces que la página se recarga,
+            //menos la primera vez.
+
+            //La primera vez que se carga no es postback
             if (!IsPostBack)
             {
                 Leer();
-                DropDownList1.DataValueField = "id";
                 DropDownList1.DataTextField = "nombre";
+                DropDownList1.DataValueField = "id";
+                
 
                 DropDownList1.DataSource = jugadores;
                 DropDownList1.DataBind();
