@@ -33,7 +33,6 @@
         <br />
         <asp:RequiredFieldValidator ID="RequiredFieldValidatorGoles" runat="server" ControlToValidate="TextBox2" ErrorMessage="Debe ingresar un valor"></asp:RequiredFieldValidator>
         <br />
-        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="RegularExpressionValidator"></asp:RegularExpressionValidator>
         <br />
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
         <br />
